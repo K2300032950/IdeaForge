@@ -1,0 +1,182 @@
+/* Center page vertically and horizontally */
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensures content is centered top-down */
+  height: 100vh;
+  width: 100vw;
+  background: #0f172a; /* Dark background to make glow pop */
+}
+
+/* Container with animated border */
+.profile-container {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.6s ease-in-out, borderGlow 2s infinite alternate;
+  border: 2px solid #3b82f6;
+}
+
+/* Fade in animation on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing border animation for container */
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px #e8eaed, 0 0 20px #3b82f6;
+  }
+  100% {
+    box-shadow: 0 0 20px #e1e5e9, 0 0 40px #eceef0;
+  }
+}
+
+/* Profile picture section */
+.profile-pic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 4px solid #3b82f6;
+  box-shadow: 0 0 15px #3b82f6;
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Enlarged effect on click */
+.profile-pic.enlarged {
+  transform: scale(3.5);
+  z-index: 1000;
+  /* box-shadow: 0 0 30px #d10d0a; */
+}
+
+/* Glowing pulse effect */
+@keyframes pulseGlow {
+  0% {
+    /* box-shadow: 0 0 10px #3b82f6; */
+  }
+  100% {
+    /* box-shadow: 0 0 25px #e9eae9; */
+  }
+}
+
+/* Placeholder for empty profile pic */
+.profile-pic-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 14px;
+  border: 2px dashed #64748b;
+}
+
+/* Upload button (optional if using label as trigger) */
+.upload-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Hidden file input (no text cursor) */
+.file-input {
+  display: none;
+}
+
+/* Stats row with spacing */
+.user-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+  color: #f1f5f9;
+}
+
+.stat span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Name and email below stats */
+.user-details {
+  margin-top: 20px;
+  color: #e2e8f0;
+}
+
+.user-details h3 {
+  margin: 10px 0 5px 0;
+  font-size: 22px;
+}
+
+.user-details p {
+  color: #cbd5e1;
+}
+/* Glowing Back to Dashboard Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 0 15px #3b82f6, 0 0 25px #3b82f6;
+}

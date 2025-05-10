@@ -1,0 +1,283 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Full page with video background */
+  .home-page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: brightness(0.5); /* Dims video brightness */
+  }
+  
+  /* Logo at top-left */
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .signin-btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .home-btns{
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  .blog-btn{
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  /* Common style for top-right buttons */
+ /* Common style for top buttons */
+
+  
+  /* Border on hover only */
+  .top-btn:hover {
+    border: 1px solid #ffffff99;
+    background-color: transparent;
+  }
+  
+  /* Moved down title */
+  .animated-title {
+    margin-top: 280px; /* Adjusted to appear lower */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .animated-title span {
+    color: #e65213;
+    text-shadow: 0 0 10px #d44e06;
+  }
+  
+  .content {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  .animated-subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .animated-description {
+    font-size: 0.8rem;
+    max-width: 600px;
+    margin: auto;
+    color: #e0e0e0;
+  }
+  
+  /* Center Buttons */
+  .buttons {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .about-btn,
+  .me-btn {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1rem;
+    background-color: #075fda88;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .about-btn:hover,
+  .me-btn:hover {
+    background-color: #00c2ffcc;
+  }
+  
+  /* Form Container */
+  .form-container {
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 280px;
+    z-index: 20;
+  
+    /* Light border styling */
+    /* border: 1px solid #3e0ec0;
+    box-shadow: 0 0 10px rgba(7, 142, 209, 0.995); */
+    background-color: transparent; /* See-through form */
+  }
+  
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  .v{
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 15px;
+
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(236, 235, 241, 0.995);
+  }
+  
+  .signup-form h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+/* Ensure the parent container is a flexbox */
+.btn {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    width: 100%; /* Ensure it spans the full width of its container */
+  }
+  
+  /* Button style */
+  .submit-btn {
+    padding: 8px 15px;
+    background-color: #e9631b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 80px; /* Adjust the width to the desired size */
+  }
+/* Ensure the parent container is a flexbox */
+.btns {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    width: 100%; /* Ensure it spans the full width of its container */
+  }
+  
+  /* Button style */
+  .submit-btn {
+    padding: 8px 15px;
+    background-color: #e9631b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 80px; /* Adjust the width to the desired size */
+  }
+    
+  
+  .submit-btn:hover {
+    background-color: #c92306;
+  }
+  
+  .switch-form {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #f8f3f3;
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
